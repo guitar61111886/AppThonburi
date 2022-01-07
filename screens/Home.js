@@ -103,15 +103,15 @@ export default class App extends Component {
     // );
 
     _renderItem = ({ item }) => (
-        <Text style={{fontSize: 18,fontWeight: '500'}}>{item.PbsChtNum} </Text>
+        <Text style={{ fontSize: 18, fontWeight: '500' }}>{item.PbsChtNum} </Text>
     );
 
     _Name = ({ item }) => (
-        <Text style={{fontSize: 18,fontWeight: '500'}}>{item.PbsPatNam} </Text>
+        <Text style={{ fontSize: 18, fontWeight: '500' }}>{item.PbsPatNam} </Text>
     );
 
     _surName = ({ item }) => (
-        <Text style={{fontSize: 18,fontWeight: '500'}}>{item.PbsSurNam} </Text>
+        <Text style={{ fontSize: 18, fontWeight: '500' }}>{item.PbsSurNam} </Text>
     );
 
     render() {
@@ -127,28 +127,29 @@ export default class App extends Component {
                 <View style={styles.container}>
 
                     <View style={styles.paddingHNText}>
-                    <Text style={{ color: '#455875', fontSize: 20, marginLeft: 80 }}>
-                        HN-
-                        <FlatList
-                            data={this.state.dataSource}
-                            renderItem={this._renderItem}
-                            keyExtractor={(item, index) => index}
-                        />
-                    </Text>
+                        <Text style={{ color: '#455875', fontSize: 20, marginLeft: 80 }}>
+                            HN-
+                            <FlatList
+                                data={this.state.dataSource}
+                                renderItem={this._renderItem}
+                                keyExtractor={(item, index) => index}
+                            />
+                        </Text>
 
-                    <Text style={{fontSize: 18,fontWeight: '500',marginLeft:45}}>ชื่อ
-                        <FlatList
-                            data={this.state.dataSource}
-                            renderItem={this._Name}
-                            keyExtractor={(item, index) => index}
-                        />
+                        <Text style={{ fontSize: 18, fontWeight: '500', marginLeft: 45 }}>ชื่อ
+                            <FlatList
+                                data={this.state.dataSource}
+                                renderItem={this._Name}
+                                keyExtractor={(item, index) => index}
+                            />
 
-                        นามสุกล <FlatList
-                            data={this.state.dataSource}
-                            renderItem={this._surName}
-                            keyExtractor={(item, index) => index}
-                        />
-                    </Text>
+
+                            นามสุกล <FlatList
+                                data={this.state.dataSource}
+                                renderItem={this._surName}
+                                keyExtractor={(item, index) => index}
+                            />
+                        </Text>
 
                     </View>
                     <View style={styles.paddingServiceText}>
@@ -175,7 +176,7 @@ const styles = StyleSheet.create({
         //flex: 1,
         // justifyContent:'center',
         // alignItems: 'center',
-        marginTop: 30
+        marginTop: 3
     },
     cardView: {
         flexDirection: "row",
@@ -208,14 +209,14 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     paddingHNText: {
-        padding: 15 ,
+        padding: 6,
         backgroundColor: '#7199d9',
-        marginTop: 20,
+        marginTop: 10,
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
-        marginHorizontal: 90,
+        marginHorizontal: 15,
     },
 })
 
