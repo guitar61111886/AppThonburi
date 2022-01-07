@@ -103,15 +103,15 @@ export default class App extends Component {
     // );
 
     _renderItem = ({ item }) => (
-        <Text style={{fontSize: 20,fontWeight: '500'}}>{item.PbsChtNum} </Text>
+        <Text style={{fontSize: 18,fontWeight: '500'}}>{item.PbsChtNum} </Text>
     );
 
     _Name = ({ item }) => (
-        <Text style={{fontSize: 20,fontWeight: '500'}}>{item.PbsPatNam} </Text>
+        <Text style={{fontSize: 18,fontWeight: '500'}}>{item.PbsPatNam} </Text>
     );
 
     _surName = ({ item }) => (
-        <Text style={{fontSize: 20,fontWeight: '500'}}>{item.PbsSurNam} </Text>
+        <Text style={{fontSize: 18,fontWeight: '500'}}>{item.PbsSurNam} </Text>
     );
 
     render() {
@@ -125,6 +125,8 @@ export default class App extends Component {
         } else {
             return (
                 <View style={styles.container}>
+
+                    <View style={styles.paddingHNText}>
                     <Text style={{ color: '#455875', fontSize: 20, marginLeft: 80 }}>
                         HN-
                         <FlatList
@@ -134,7 +136,7 @@ export default class App extends Component {
                         />
                     </Text>
 
-                    <Text style={{fontSize: 18,fontWeight: '500'}}>ชื่อ
+                    <Text style={{fontSize: 18,fontWeight: '500',marginLeft:45}}>ชื่อ
                         <FlatList
                             data={this.state.dataSource}
                             renderItem={this._Name}
@@ -147,6 +149,8 @@ export default class App extends Component {
                             keyExtractor={(item, index) => index}
                         />
                     </Text>
+
+                    </View>
                     <View style={styles.paddingServiceText}>
                         <Text style={styles.serviceText}>ประวัติการเข้ารับบริการ</Text>
                     </View>
@@ -202,6 +206,16 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontFamily: "Cochin",
         textAlign: 'center',
+    },
+    paddingHNText: {
+        padding: 15 ,
+        backgroundColor: '#7199d9',
+        marginTop: 20,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20,
+        marginHorizontal: 90,
     },
 })
 
